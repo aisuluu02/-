@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* Анимация */
+.bubble {
+  border-radius: 50%;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2),
+  inset
+  0px 10px 30px 5px rgb(138, 135, 221);
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+@keyframes animateBubble {
+  0% {
+    margin-top: 1000px;
+  }
+  100% {
+    margin-top: -100%;
+  }
+}
+@keyframes sideWays {
+  0 {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+/* linear плавно. infinite бесконечно работать будешь */
+.x1 {
+  animation: animateBubble 25s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  left: 50%;
+  top: 5%;
+  transform: scale(0.6);
+ 
+}
+.x2 {
+  animation: animateBubble 20s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+  left: 25%;
+  top: 80%;
+  transform: scale(0.4);
+
+}
+.x3 {
+  animation: animateBubble 28s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  left: 60%;
+  top: 40%;
+  transform: scale(0.4);
+  
+}
+.x4 {
+  animation: animateBubble 22s linear infinite,
+    sideWays 3s ease-in-out infinite alternate;
+  left: 30%;
+  top: 15%;
+  transform: scale(0.8);
+
+}
+.x5 {
+  animation: animateBubble 29s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  left: 70%;
+  top: 10%;
+  transform: scale(0.5);
+ 
+}
+.x6 {
+  animation: animateBubble 21s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  left: 40%;
+  top: 50%;
+  transform: scale(0.5);
+  
+}
+/* Конец анимации */
+body {
+  overflow-x: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Устанавливаем высоту всего body на 100% видимой высоты окна просмотра */
+  }
+  
+  .container {
+    display: flex;
+    width: 100%; /* Занимаем всю высоту body */
+    
+    
+  }
+  
+  .sidebar {
+    width: 30%;
+    /* background-color: #f1f1f1; */
+    padding: 20px;
+    height: 100%; /* Занимаем всю высоту контейнера */
+    background-color: #c5b0cd;
+
+  }
+
+  .navbar{
+    display: flex;
+    justify-content: center;
+   
+  }
+
+  .navbar li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 15px;
+border: 0.5px solid #5b0ea9;
+background: #FFF4F1;
+margin: 20px;
+padding: 5px;
+color: #7C3AED;
+font-family: Plus Jakarta Sans;
+
+  }
+
+  .gradient h1{
+    color: var(--light-text-primary, #334155);
+    font-family: Plus Jakarta Sans;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .container span{
+    color: var(--light-text-secondary, #153563);
+font-family: Plus Jakarta Sans;
+font-size: 25px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+  }
+
+  .container p{
+    color: var(--light-text-primary, #334155);
+
+/* content */
+font-family: Plus Jakarta Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+
+  ul {
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем отступы*/
+    padding-left: 0; /*убираем отступы*/
+  }
+  a {
+    text-decoration: none; /*убираем подчеркивание текста ссылок*/
+    color: var(--light-text-secondary, #153563);
+  }
+  li {
+    float:left; /*Размещаем список горизонтально для реализации меню*/
+    margin-right:5px; /*Добавляем отступ у пунктов меню*/
+  }
+  
+  .main-content {
+    width: 70%;
+    padding: 20px;
+    height: 100%; /* Занимаем всю высоту контейнера */
+    
+
+  }
+  
+  .gradient{
+    
+    background: linear-gradient(180deg, rgba(224, 7, 184, 0) 0%, rgb(115, 18, 142) 100%);
+    padding-bottom: 15px;
+  }
+  /* Здесь у нас умения и навыки в процентах */
+  .viewport1::before{
+    content: url(../images/circular/Screenshot_1.png);
+  }
+  .viewport2::before{
+    content: url(../images/circular/Screenshot_2.png);
+  }
+  .viewport3::before{
+    content: url(../images/circular/Screenshot_3.png);
+  }
+  .viewport4::before{
+    content: url(../images/circular/Screenshot_4.png);
+  }
+  .viewport5::before{
+    content: url(../images/circular/Screenshot_5.png);
+  }
+
+
+
+.films {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+
+  
+}
+.films img{
+  width: 200px;
+  /* footer */
+}
+footer{
+  position: relative;/*относительное позиционирование*/
+  width: 100%;/*на всю ширину*/
+  padding: 20px 0px;/*поля для контента*/
+  background: #934cad;/*цвет футера*/
+  display: flex;
+  justify-content: center;/*в центре по горизонтали*/
+  align-items: center;/*в центре по вертикали*/
+  flex-direction: column;
+  margin-top: 100px;/*отступ сверху*/
+}
+footer .wave{
+  position: absolute;/*абсолютное позиционирование*/
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: 
+  background-size: 1000px 100px;/*ширина и высота волны*/
+}
+.social,
+.menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;/*разрешен перенос на новую строку*/
+}
+.social li,
+.menu li{
+  list-style: none;/*удалить черные маркеры*/
+  /* color: #ffffff; */
+}
+.social li a {
+  font-size: 2em;/*размер иконок*/
+  margin: 0 10px; 
+  display: inline-block;/*отображать как строчно-блочный элемент*/
+  transition: 0.5s;/*плавный переход*/
+  color: #fff;
+}
+.menu li a {
+  font-size: 1.2em;/*размер ссылок меню*/
+  color: #fff;/*цвет ссылок меню*/
+  opacity: 0.75;/*значение прозрачности*/
+  margin: 0 15px;
+  text-decoration: none;/*ссылка без подчеркивания*/
+  display: inline-block;
+}
+.menu li a:hover {
+  opacity: 1;
+}
+footer p {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.1em;
+}
+/* АДАПТИВКА НАЧАЛО */
+@media (max-width: 1024px) {
+	footer{
+    width: 1100px;
+  }
+}
+@media (max-width: 976px) {
+	.films{
+     display: flex;
+     flex-direction: column;
+  }
+}
+
+@media (max-width: 901px) {
+.sidebar img{
+  width: 250px;
+  
+}
+}
+@media (max-width: 800px) {
+  .sidebar{
+    
+    
+  }
+  }
